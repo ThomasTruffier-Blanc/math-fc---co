@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Site de revision Maths S2 BUT R&T, cours pages 1 a 90." />
+    <title>Revisions Maths S2 - Pages 1 a 90</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#accueil" aria-label="Retour a l'accueil">
+        <span class="brand-mark">S2</span>
+        <span>Revision Maths</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#methode">Methode</a>
+        <a href="#fiches">Fiches</a>
+        <a href="#cours">Cours</a>
+        <a href="#entrainement">Exercices</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
+      <div class="progress-pill" aria-label="Progression">
+        <span id="progressText">0%</span>
+        <span class="progress-track"><span id="progressBar"></span></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero-copy">
+          <p class="eyebrow">Cours pages 1 a 90 - plan de revision</p>
+          <h1>Etude de fonctions, fonctions usuelles et nombres complexes.</h1>
+          <p class="lead">
+            Un parcours court pour revoir les reflexes utiles: continuite, derivees, asymptotes,
+            exponentielle, logarithme, fonctions reciproques, complexes et representation des signaux.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#methode">Commencer</a>
+            <a class="secondary-action" href="#quiz">Faire le quiz</a>
+          </div>
+        </div>
+        <aside class="hero-board" aria-label="Resume de revision">
+          <div class="formula-card">
+            <span class="tag">A retenir</span>
+            <p>Pour une etude de fonction, garde toujours le meme ordre:</p>
+            <strong>Domaine -> limites -> derivee -> variations -> asymptotes</strong>
+            <span>puis conclusion graphique avec les points importants.</span>
+          </div>
+          <div class="mini-board" aria-hidden="true">
+            <span>f'(x0) = lim [f(x0+h)-f(x0)] / h</span>
+            <span>ei theta = cos theta + i sin theta</span>
+            <span>|a + ib| = sqrt(a^2 + b^2)</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section band" id="methode">
+        <div class="section-heading">
+          <p class="eyebrow">Methode en 5 blocs</p>
+          <h2>Le chemin a suivre avant un controle</h2>
+        </div>
+        <div class="method-grid">
+          <article class="step-card" data-progress-item>
+            <span class="step-number">1</span>
+            <h3>Continuites et TVI</h3>
+            <p>Verifie les limites a gauche et a droite, puis utilise le TVI ou la bijection si la fonction est continue et monotone.</p>
+            <button class="mini-check" type="button">Marquer vu</button>
+          </article>
+          <article class="step-card" data-progress-item>
+            <span class="step-number">2</span>
+            <h3>Derivees</h3>
+            <p>Connaitre la definition, l'equation de la tangente, les derivees usuelles et les operations produit, quotient, composee.</p>
+            <button class="mini-check" type="button">Marquer vu</button>
+          </article>
+          <article class="step-card" data-progress-item>
+            <span class="step-number">3</span>
+            <h3>Variations et asymptotes</h3>
+            <p>Le signe de f' donne le tableau de variation. Les limites donnent les asymptotes horizontales, verticales ou obliques.</p>
+            <button class="mini-check" type="button">Marquer vu</button>
+          </article>
+          <article class="step-card" data-progress-item>
+            <span class="step-number">4</span>
+            <h3>Fonctions usuelles</h3>
+            <p>Revois exp, ln, loga, ax, arcsin, arccos, tan et arctan avec leurs derivees et comportements limites.</p>
+            <button class="mini-check" type="button">Marquer vu</button>
+          </article>
+          <article class="step-card" data-progress-item>
+            <span class="step-number">5</span>
+            <h3>Complexes et signaux</h3>
+            <p>Savoir passer de a + ib a rho e^{i theta}, utiliser Euler/Moivre et lire une amplitude complexe de signal sinusoidal.</p>
+            <button class="mini-check" type="button">Marquer vu</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="fiches">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Fiches rapides</p>
+            <h2>Les notions du cours, condensees</h2>
+          </div>
+          <div class="segmented" role="tablist" aria-label="Choix de fiche">
+            <button class="tab active" type="button" data-tab="fonctions">Etude</button>
+            <button class="tab" type="button" data-tab="usuelles">Usuelles</button>
+            <button class="tab" type="button" data-tab="complexes">Complexes</button>
+            <button class="tab" type="button" data-tab="signaux">Signaux</button>
+          </div>
+        </div>
+
+        <div class="lesson-layout">
+          <article class="lesson-panel active" id="fonctions" data-panel>
+            <h3>Etude d'une fonction reelle</h3>
+            <p>Une etude complete doit etre automatique. Tu cherches d'abord ou la fonction existe, puis les limites, les points singuliers, la derivee et le signe de la derivee.</p>
+            <div class="math-line">T(x) = f'(x0)(x - x0) + f(x0)</div>
+            <ol class="clean-list">
+              <li>Continuite en a: lim f(x) = f(a).</li>
+              <li>TVI: si f est continue sur [a,b], toute valeur entre f(a) et f(b) est atteinte.</li>
+              <li>Bijection: si f est continue et strictement monotone, la solution est unique.</li>
+              <li>Variation: f' positive donne f croissante, f' negative donne f decroissante.</li>
+            </ol>
+          </article>
+
+          <article class="lesson-panel" id="usuelles" data-panel>
+            <h3>Fonctions usuelles</h3>
+            <p>Le plus important est de reconnaitre vite les derivees et les limites comparees. Exp gagne contre les puissances, ln grandit plus lentement que x.</p>
+            <div class="math-line">(e^u)' = u'e^u ; (ln u)' = u'/u ; (u^alpha)' = alpha u'u^{alpha-1}</div>
+            <ol class="clean-list">
+              <li>e^x ~ 1 + x quand x tend vers 0.</li>
+              <li>ln(1 + x) ~ x quand x tend vers 0.</li>
+              <li>log_a(x) = ln(x)/ln(a) et (a^x)' = ln(a)a^x.</li>
+              <li>arcsin'(x) = 1/sqrt(1-x^2), arccos'(x) = -1/sqrt(1-x^2), arctan'(x) = 1/(1+x^2).</li>
+            </ol>
+          </article>
+
+          <article class="lesson-panel" id="complexes" data-panel>
+            <h3>Nombres complexes</h3>
+            <p>Un complexe z = a + ib se lit dans le plan: a est la partie reelle, b la partie imaginaire. La forme polaire donne le module et l'argument.</p>
+            <div class="math-line">z = a + ib = rho e^{i theta}, avec rho = |z| = sqrt(a^2 + b^2)</div>
+            <ol class="clean-list">
+              <li>Conjugue: z barre = a - ib.</li>
+              <li>Inverse: multiplier par le conjugue du denominateur.</li>
+              <li>Euler: e^{i theta} = cos theta + i sin theta.</li>
+              <li>Moivre: (e^{i theta})^n = e^{in theta}.</li>
+            </ol>
+          </article>
+
+          <article class="lesson-panel" id="signaux" data-panel>
+            <h3>Representation complexe des signaux</h3>
+            <p>Un signal sinusoidal peut etre represente par une amplitude complexe. Cette representation simplifie les derivations, integrations et sommes de signaux de meme pulsation.</p>
+            <div class="math-line">x(t) = E cos(omega t + phi) ; X(t) = E e^{j(omega t + phi)}</div>
+            <ol class="clean-list">
+              <li>Amplitude complexe: X = E e^{j phi}.</li>
+              <li>Deriver revient a multiplier par j omega.</li>
+              <li>Integrer revient a multiplier par 1/(j omega).</li>
+              <li>Fresnel represente X comme un vecteur dans le plan complexe.</li>
+            </ol>
+          </article>
+
+          <aside class="course-preview">
+            <button class="pager" type="button" id="prevPage" aria-label="Page precedente">&lsaquo;</button>
+            <iframe id="courseFrame" title="Apercu du cours page 1" src="assets/files/cours-maths-s2-pages-1-90.pdf#page=1"></iframe>
+            <button class="pager" type="button" id="nextPage" aria-label="Page suivante">&rsaquo;</button>
+            <p id="pageLabel">Cours page 1</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section band" id="cours">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Pages du PDF</p>
+            <h2>Se reperer dans les pages 1 a 90</h2>
+          </div>
+          <a class="secondary-action" href="assets/files/cours-maths-s2-pages-1-90.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+        </div>
+        <div class="map-grid">
+          <button class="map-card" type="button" data-page="4">
+            <span>Pages 4-8</span>
+            <strong>Continuite, TVI, bijection</strong>
+            <small>Existence et unicite d'une solution.</small>
+          </button>
+          <button class="map-card" type="button" data-page="9">
+            <span>Pages 9-26</span>
+            <strong>Derivees et variations</strong>
+            <small>Tangente, tables de derivees, composees.</small>
+          </button>
+          <button class="map-card" type="button" data-page="27">
+            <span>Pages 27-36</span>
+            <strong>Asymptotes et etude complete</strong>
+            <small>Horizontales, verticales, obliques, DL.</small>
+          </button>
+          <button class="map-card" type="button" data-page="38">
+            <span>Pages 38-50</span>
+            <strong>Fonctions usuelles</strong>
+            <small>Exp, ln, log, arcsin, arccos, tan.</small>
+          </button>
+          <button class="map-card" type="button" data-page="51">
+            <span>Pages 51-78</span>
+            <strong>Complexes</strong>
+            <small>Forme algebrique, module, argument, Euler.</small>
+          </button>
+          <button class="map-card" type="button" data-page="79">
+            <span>Pages 79-90</span>
+            <strong>Racines et signaux</strong>
+            <small>Racines n-iemes, Fresnel, forme polaire.</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="section" id="entrainement">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Entrainement guide</p>
+            <h2>Exercices reflexes</h2>
+          </div>
+          <button class="secondary-action" type="button" id="resetPractice">Reinitialiser</button>
+        </div>
+        <div class="exercise-grid">
+          <article class="exercise-card" data-progress-item>
+            <span class="tag">Continuite</span>
+            <h3>Point de raccord</h3>
+            <p>Comment montrer qu'une fonction est continue en a ?</p>
+            <button class="reveal-answer" type="button" data-answer="answer1">Voir la methode</button>
+            <div class="answer" id="answer1">
+              <p>Calcule la limite a gauche et a droite en a, puis compare avec f(a). Si les trois valeurs sont egales, f est continue en a.</p>
+            </div>
+          </article>
+          <article class="exercise-card" data-progress-item>
+            <span class="tag">Tangente</span>
+            <h3>Equation locale</h3>
+            <p>Donner l'equation de la tangente a f en x0.</p>
+            <button class="reveal-answer" type="button" data-answer="answer2">Voir la methode</button>
+            <div class="answer" id="answer2">
+              <p>T(x) = f'(x0)(x - x0) + f(x0). Il faut donc calculer f(x0) et f'(x0).</p>
+            </div>
+          </article>
+          <article class="exercise-card" data-progress-item>
+            <span class="tag">Derivee</span>
+            <h3>Composee</h3>
+            <p>Deriver f(x) = e^{3x^2 - 2x}.</p>
+            <button class="reveal-answer" type="button" data-answer="answer3">Voir la correction</button>
+            <div class="answer" id="answer3">
+              <p>Avec u = 3x^2 - 2x, u' = 6x - 2. Donc f'(x) = (6x - 2)e^{3x^2 - 2x}.</p>
+            </div>
+          </article>
+          <article class="exercise-card" data-progress-item>
+            <span class="tag">Asymptote</span>
+            <h3>Verticale</h3>
+            <p>Quand la droite x = a est-elle asymptote verticale ?</p>
+            <button class="reveal-answer" type="button" data-answer="answer4">Voir la methode</button>
+            <div class="answer" id="answer4">
+              <p>Si f(x) tend vers +infini ou -infini quand x tend vers a, au moins d'un cote.</p>
+            </div>
+          </article>
+          <article class="exercise-card" data-progress-item>
+            <span class="tag">Ln</span>
+            <h3>Limite usuelle</h3>
+            <p>Calculer lim ln(1+x)/x quand x tend vers 0.</p>
+            <button class="reveal-answer" type="button" data-answer="answer5">Voir la correction</button>
+            <div class="answer" id="answer5">
+              <p>La limite vaut 1, car ln(1+x) est equivalent a x au voisinage de 0.</p>
+            </div>
+          </article>
+          <article class="exercise-card" data-progress-item>
+            <span class="tag">Complexes</span>
+            <h3>Module</h3>
+            <p>Calculer le module de z = 3 - 4i.</p>
+            <button class="reveal-answer" type="button" data-answer="answer6">Voir la correction</button>
+            <div class="answer" id="answer6">
+              <p>|z| = sqrt(3^2 + (-4)^2) = sqrt(25) = 5.</p>
+            </div>
+          </article>
+          <article class="exercise-card" data-progress-item>
+            <span class="tag">Euler</span>
+            <h3>Forme algebrique</h3>
+            <p>Mettre e^{i pi/2} sous forme algebrique.</p>
+            <button class="reveal-answer" type="button" data-answer="answer7">Voir la correction</button>
+            <div class="answer" id="answer7">
+              <p>e^{i pi/2} = cos(pi/2) + i sin(pi/2) = i.</p>
+            </div>
+          </article>
+          <article class="exercise-card" data-progress-item>
+            <span class="tag">Signal</span>
+            <h3>Amplitude complexe</h3>
+            <p>Pour x(t)=3 cos(1000t - 0,2), quelle est l'amplitude complexe ?</p>
+            <button class="reveal-answer" type="button" data-answer="answer8">Voir la correction</button>
+            <div class="answer" id="answer8">
+              <p>X = 3e^{-j0,2}. La partie e^{j1000t} porte l'evolution temporelle.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section band" id="quiz">
+        <div class="section-heading">
+          <p class="eyebrow">Quiz rapide</p>
+          <h2>Verifier que les reflexes sont la</h2>
+        </div>
+        <div class="quiz-shell">
+          <div class="quiz-top">
+            <span id="questionCounter">Question 1/20</span>
+            <span id="scoreText">Score 0</span>
+          </div>
+          <h3 id="questionText"></h3>
+          <div id="choices" class="choices"></div>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <div class="quiz-actions">
+            <button class="secondary-action" type="button" id="prevQuestion">Precedente</button>
+            <button class="secondary-action" type="button" id="resetQuiz">Recommencer</button>
+            <button class="primary-action" type="button" id="nextQuestion">Suivante</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Source: Cours Maths S2 2024-2025, pages 1 a 90.</p>
+      <a href="#accueil">Remonter</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
